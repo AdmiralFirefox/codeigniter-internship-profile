@@ -133,19 +133,35 @@
         <div class="skills-container">
           <div class="skill-content" id="fade-up-animation">
             <p>Frontend</p>
-            <ul data-skills-frontend></ul>
+            <ul>
+              <?php foreach ($frontend_skills as $key => $skills): ?>
+                <li><?= $skills['skill_name'].($key === array_key_last($frontend_skills) ? '' : ',') ?></li>
+              <?php endforeach; ?>
+            </ul>
           </div>
           <div class="skill-content" id="fade-up-animation">
             <p>Backend</p>
-            <ul data-skills-backend></ul>
+            <ul>
+              <?php foreach ($backend_skills as $key => $skills): ?>
+                <li><?= $skills['skill_name'].($key === array_key_last($backend_skills) ? '' : ',') ?></li>
+              <?php endforeach; ?>
+            </ul>
           </div>
           <div class="skill-content" id="fade-up-animation">
             <p>Databases</p>
-            <ul data-skills-databases></ul>
+            <ul>
+              <?php foreach ($databases_skills as $key => $skills): ?>
+                <li><?= $skills['skill_name'].($key === array_key_last($databases_skills) ? '' : ',') ?></li>
+              <?php endforeach; ?>
+            </ul>
           </div>
           <div class="skill-content" id="fade-up-animation">
             <p>AI/ML</p>
-            <ul data-skills-ml></ul>
+            <ul>
+              <?php foreach ($ml_skills as $key => $skills): ?>
+                <li><?= $skills['skill_name'].($key === array_key_last($ml_skills) ? '' : ',') ?></li>
+              <?php endforeach; ?>
+            </ul>
           </div>
         </div>
       </div>
