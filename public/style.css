@@ -285,7 +285,7 @@
   align-items: center;
   justify-content: center;
   gap: 2em;
-  margin: 8.5em 2em 8em 2em;
+  padding: 8.5em 2em 8em 2em;
   scroll-margin: 5em;
 }
 .about-section .profile-picture {
@@ -300,7 +300,6 @@
 .about-section .profile-picture h1 {
   font-family: "Poppins", sans-serif;
   font-size: 2.5rem;
-  margin-top: 0.35em;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -341,7 +340,7 @@
   .about-section {
     flex-direction: row;
     gap: 4em;
-    margin: 6.5em 2em 8em 2em;
+    padding: 6.5em 2em 8em 2em;
   }
   .about-section .about-content p {
     text-align: left;
@@ -349,13 +348,12 @@
 }
 
 .skills-section {
-  margin-bottom: 7em;
+  padding-bottom: 7em;
   scroll-margin: 5em;
 }
 .skills-section h1 {
   font-family: "Poppins", sans-serif;
   font-size: 2.5rem;
-  margin-top: 0.35em;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -414,13 +412,12 @@
 }
 
 .projects-section {
-  margin-bottom: 7em;
+  padding-bottom: 7em;
   scroll-margin: 5em;
 }
 .projects-section h1 {
   font-family: "Poppins", sans-serif;
   font-size: 2.5rem;
-  margin-top: 0.35em;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -518,13 +515,12 @@
   }
 }
 .interests-section {
-  margin-bottom: 7em;
+  padding-bottom: 7em;
   scroll-margin: 5em;
 }
 .interests-section h1 {
   font-family: "Poppins", sans-serif;
   font-size: 2.5rem;
-  margin-top: 0.35em;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -581,13 +577,12 @@
 }
 
 .questions-section {
-  margin-bottom: 9.5em;
+  padding-bottom: 9.5em;
   scroll-margin: 5em;
 }
 .questions-section h1 {
   font-family: "Poppins", sans-serif;
   font-size: 2.5rem;
-  margin-top: 0.35em;
   text-align: center;
   display: flex;
   flex-direction: column;
