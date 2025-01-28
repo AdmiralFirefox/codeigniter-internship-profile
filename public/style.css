@@ -346,7 +346,7 @@
   .about-section {
     flex-direction: row;
     gap: 4em;
-    padding: 6.5em 2em 8em 2em;
+    padding: 7em 2em 8em 2em;
   }
   .about-section .about-content p {
     text-align: left;
@@ -354,6 +354,7 @@
 }
 
 .skills-section {
+  padding-top: 7em;
   padding-bottom: 7em;
   scroll-margin: 5em;
 }
@@ -418,7 +419,8 @@
 }
 
 .projects-section {
-  padding-bottom: 7em;
+  padding-top: 7em;
+  padding-bottom: 8em;
   scroll-margin: 5em;
 }
 .projects-section h1 {
@@ -521,6 +523,7 @@
   }
 }
 .interests-section {
+  padding-top: 7em;
   padding-bottom: 7em;
   scroll-margin: 5em;
 }
@@ -583,7 +586,8 @@
 }
 
 .questions-section {
-  padding-bottom: 9.5em;
+  padding-top: 7em;
+  padding-bottom: 8em;
   scroll-margin: 5em;
 }
 .questions-section h1 {
@@ -666,8 +670,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #923fe6;
-  padding: 7em 1.3em;
+  padding: 8.5em 1.3em;
   scroll-margin: 5em;
 }
 .contacts-section .contact-info h1 {
@@ -699,7 +702,7 @@
 }
 @media (min-width: 30em) {
   .contacts-section {
-    padding: 7.2em 2em;
+    padding: 8.5em 2em;
   }
   .contacts-section .contact-info p {
     margin-top: 0.5em;
