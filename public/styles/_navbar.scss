@@ -71,9 +71,11 @@
     }
 
     // Web Logo
-    h1 {
+    a {
+      text-decoration: none;
       font-family: "Poppins", sans-serif;
       font-size: 2.2rem;
+      font-weight: 700;
       cursor: pointer;
       color: color.$white-color;
       user-select: none;
@@ -83,7 +85,8 @@
   div:nth-child(2) {
     display: none;
 
-    p {
+    a {
+      text-decoration: none;
       font-family: "Poppins", sans-serif;
       color: color.$white-color;
       font-size: 1.1rem;
@@ -137,11 +140,13 @@
 
 // Mobile Navbar
 .mobile-navbar {
-  transform: translateY(-150vh);
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: calc(100vh - 4em);
-  overflow-y: auto;
   @include mixin.navbar-bg();
+  transform: translateY(-150vh);
+  overflow-y: auto;
   text-align: center;
   line-height: 5em;
   position: fixed;
@@ -149,7 +154,8 @@
   box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.3);
   transition: transform 0.8s ease-in-out;
 
-  p {
+  a {
+    text-decoration: none;
     color: color.$white-color;
     font-family: "Poppins", sans-serif;
     font-size: 1.4rem;
