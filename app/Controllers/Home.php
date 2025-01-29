@@ -64,4 +64,37 @@ class Home extends BaseController
     {
         return view('contacts');
     }
+
+    public function sendEmail()
+    {
+        $validation = service('validation');
+
+        $validation->setRules([
+            'email' => 'required|valid_email',
+            'name' => 'required|max_length[30]',
+            'subject' => 'required',
+            'message' => 'required',
+        ]);
+
+        // Show validation errors
+        if (!$this->validate($validation->getRules())) {
+            return view('contacts', ['validation' => $this->validator]);
+        }
+        
+        // Send Email
+        $emailService = service('email');
+        $emailService->setFrom($this->request->getPost('email'), $this->request->getPost('name'));
+        $emailService->setTo('jamesjoseph.cuadra@wvsu.edu.ph');
+        $emailService->setSubject($this->request->getPost('subject'));
+        $emailService->setMessage($this->request->getPost('message'));
+
+        if ($emailService->send()) {
+            session()->setFlashdata('success', 'Email sent successfully!');
+        } else {
+            session()->setFlashdata('error', 'Failed to send email.');
+        }
+    
+        // Redirect to prevent form resubmission
+        return redirect()->to(base_url('/contacts'));
+    }
 }

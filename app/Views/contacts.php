@@ -9,18 +9,37 @@
     <div class="contact-info">
         <h1>Let&apos;s work together!</h1>
     </div>
-    <form class="contact-form">
+
+    <?php if (isset($validation)): ?>
+    <div style="color: red;">
+        <?= $validation->listErrors() ?>
+    </div>
+    <?php endif; ?>
+
+    <?php if (session()->getFlashdata('success')): ?>
+    <div style="color: green;">
+        <?= session()->getFlashdata('success') ?>
+    </div>
+    <?php endif; ?>
+
+    <?php if (session()->getFlashdata('error')): ?>
+    <div style="color: red;">
+        <?= session()->getFlashdata('error') ?>
+    </div>
+    <?php endif; ?>
+
+    <form class="contact-form" action="/sendEmail" method="POST">
         <label for=" email">Your Email</label>
-        <input type="text" name="email" id="email" />
+        <input type="text" name="email" id="email" required />
 
         <label for="name">Your Name</label>
-        <input type="text" name="name" id="name" />
+        <input type="text" name="name" id="name" required />
 
         <label for="subject">Subject</label>
-        <input type="text" name="subject" id="subject" />
+        <input type="text" name="subject" id="subject" required />
 
         <label for="message">Message</label>
-        <textarea name="message" id="message"></textarea>
+        <textarea name="message" id="message" required></textarea>
 
         <button type="submit">Send Message</button>
     </form>
