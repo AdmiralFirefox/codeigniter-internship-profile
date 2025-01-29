@@ -8,9 +8,23 @@
 <div class="contacts-section" id="contacts-section">
     <div class="contact-info">
         <h1>Let&apos;s work together!</h1>
-        <p>jamesjoseph.cuadra@wvsu.edu.ph</p>
     </div>
-    <div class="contact-links">
+    <form class="contact-form">
+        <label for=" email">Your Email</label>
+        <input type="text" name="email" id="email" />
+
+        <label for="name">Your Name</label>
+        <input type="text" name="name" id="name" />
+
+        <label for="subject">Subject</label>
+        <input type="text" name="subject" id="subject" />
+
+        <label for="message">Message</label>
+        <textarea name="message" id="message"></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+    <div class=" contact-links">
         <a href="https://github.com/admiralfirefox" target="_blank">
             <i class="fa-brands fa-github"></i>
         </a>

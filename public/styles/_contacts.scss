@@ -14,20 +14,79 @@
       font-size: 2.2rem;
       line-height: 1.2em;
     }
+  }
 
-    p {
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    width: min(27em, 100%);
+
+    label {
       font-family: "Poppins", sans-serif;
-      text-align: center;
+      font-weight: 500;
       font-size: 1.1rem;
-      overflow-wrap: anywhere;
-      margin-top: 1.2em;
+      margin-top: 1em;
+
+      &:first-of-type {
+        margin-top: 1.5em;
+      }
+    }
+
+    input {
+      font-family: "Poppins", sans-serif;
+      background: color.$light-black-color;
+      border: none;
+      padding: 0.8em 1em;
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 10px;
+      margin-top: 0.5em;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    textarea {
+      font-family: "Poppins", sans-serif;
+      background: color.$light-black-color;
+      border: none;
+      resize: none;
+      height: 10em;
+      padding: 0.8em 1em;
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 10px;
+      margin-top: 0.5em;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      font-family: "Poppins", sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      background: color.$blue-color;
+      border: none;
+      align-self: start;
+      margin-top: 2em;
+      border-radius: 10px;
+      padding: 1em;
+      cursor: pointer;
+      transition: background 0.3s ease-in-out;
+
+      &:hover {
+        background: color.$blue-color-hover;
+      }
     }
   }
 
   .contact-links {
     display: flex;
     align-items: center;
-    gap: 1em;
+    gap: 2em;
     margin-top: 2em;
 
     a {
@@ -43,11 +102,5 @@
 
   @media (min-width: 30em) {
     padding: 8.5em 2em;
-
-    .contact-info {
-      p {
-        margin-top: 0.5em;
-      }
-    }
   }
 }
