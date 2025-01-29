@@ -16,6 +16,60 @@
     }
   }
 
+  .error-list {
+    margin-top: 1.3em;
+    width: 100%;
+
+    .errors {
+      width: min(27em, 100%);
+      margin: 0 auto;
+
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        li {
+          background: color.$red-color;
+          color: color.$white-color;
+          border-radius: 10px;
+          padding: 0.6em 1em;
+          font-family: "Poppins", sans-serif;
+          text-align: center;
+          font-size: 1rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .message-sent-success {
+    width: min(27em, 100%);
+    margin: 1.3em auto 0em auto;
+    background: color.$green-color;
+    color: color.$white-color;
+    border-radius: 10px;
+    padding: 0.6em 1em;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .message-sent-error {
+    width: min(27em, 100%);
+    margin: 1.3em auto 0em auto;
+    background: color.$red-color;
+    color: color.$white-color;
+    border-radius: 10px;
+    padding: 0.6em 1em;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
   .contact-form {
     display: flex;
     flex-direction: column;

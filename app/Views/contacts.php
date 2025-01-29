@@ -11,19 +11,19 @@
     </div>
 
     <?php if (isset($validation)): ?>
-    <div style="color: red;">
+    <div class="error-list">
         <?= $validation->listErrors() ?>
     </div>
     <?php endif; ?>
 
     <?php if (session()->getFlashdata('success')): ?>
-    <div style="color: green;">
+    <p class="message-sent-success">
         <?= session()->getFlashdata('success') ?>
-    </div>
+    </p>
     <?php endif; ?>
 
     <?php if (session()->getFlashdata('error')): ?>
-    <div style="color: red;">
+    <div class="message-sent-error">
         <?= session()->getFlashdata('error') ?>
     </div>
     <?php endif; ?>
