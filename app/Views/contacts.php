@@ -2,6 +2,7 @@
 
 <?= $this->section('scripts') ?>
 <script type="module" src="scripts/navbar.js" defer></script>
+<script type="module" src="scripts/contacts.js" defer></script>
 <?= $this->endsection() ?>
 
 <?= $this->section('content') ?>
@@ -28,7 +29,7 @@
     </div>
     <?php endif; ?>
 
-    <form class="contact-form" action="/sendEmail" method="POST">
+    <form class="contact-form" id="contactForm" action=" /sendEmail" method="POST">
         <label for=" email">Your Email</label>
         <input type="text" name="email" id="email" required />
 
@@ -41,7 +42,7 @@
         <label for="message">Message</label>
         <textarea name="message" id="message" required></textarea>
 
-        <button type="submit">Send Message</button>
+        <button type="submit" id="submitButton">Send Message</button>
     </form>
     <div class=" contact-links">
         <a href="https://github.com/admiralfirefox" target="_blank">

@@ -134,6 +134,11 @@
       &:hover {
         background: color.$blue-color-hover;
       }
+
+      &:disabled {
+        background: color.$light-black-color;
+        cursor: not-allowed;
+      }
     }
   }
 
