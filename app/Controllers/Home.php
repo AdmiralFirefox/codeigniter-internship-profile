@@ -2,10 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\FrontendSkills;
-use App\Models\BackendSkills;
-use App\Models\DatabasesSkills;
-use App\Models\MlSkills;
+use App\Models\Skills;
 use App\Models\Projects;
 
 class Home extends BaseController
@@ -22,15 +19,11 @@ class Home extends BaseController
 
     public function skills()
     {
-        $frontendSkillsModel = new FrontendSkills();
-        $backendSkillsModel = new BackendSkills();
-        $databasesSkillsModel = new DatabasesSkills();
-        $mlSkillsModel = new MlSkills();
-
-        $frontendSkills = $frontendSkillsModel->findAll();
-        $backendSkills = $backendSkillsModel->findAll();
-        $databasesSkills = $databasesSkillsModel->findAll();
-        $mlSkills = $mlSkillsModel->findAll();
+        $skillsModel = new Skills();
+        $frontendSkills = $skillsModel->where('category', 'frontend')->findAll();
+        $backendSkills  = $skillsModel->where('category', 'backend')->findAll();
+        $databasesSkills = $skillsModel->where('category', 'databases')->findAll();
+        $mlSkills = $skillsModel->where('category', 'ml')->findAll();
 
         $data = [
             'frontend_skills' => $frontendSkills,
@@ -38,7 +31,7 @@ class Home extends BaseController
             'databases_skills' => $databasesSkills,
             'ml_skills' => $mlSkills,
         ];
-
+        
         return view('skills', $data);
     }
 
