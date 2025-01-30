@@ -820,7 +820,7 @@
 }
 
 body {
-  background: #000000;
+  background: linear-gradient(to right, #000000, #222);
 }
 
 /*# sourceMappingURL=style.css.map */
