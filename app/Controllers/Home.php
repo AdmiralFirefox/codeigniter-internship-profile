@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\Skills;
 use App\Models\Projects;
+use App\Models\Users;
 
 class Home extends BaseController
 {
@@ -63,15 +64,20 @@ class Home extends BaseController
         $validation = service('validation');
 
         $validation->setRules([
-            'email' => 'required|valid_email',
+            'email' => [
+                'rules' => 'required|valid_email|is_unique[users.email]',
+                'errors' => [
+                    'is_unique' => 'This email is already registered. Please use another one.'
+                ]
+            ],
             'name' => 'required|max_length[30]',
             'subject' => 'required',
             'message' => 'required',
         ]);
 
         // Show validation errors
-        if (!$this->validate($validation->getRules())) {
-            return view('contacts', ['validation' => $this->validator]);
+        if (!$validation->withRequest($this->request)->run()) {
+            return view('contacts', ['validation' => $validation]);
         }
         
         // Send Email
@@ -86,7 +92,17 @@ class Home extends BaseController
         } else {
             session()->setFlashdata('error', 'Failed to send email.');
         }
-    
+
+        // Send Data to database
+        $users = new Users();
+        $data = [
+            'email' => $this->request->getPost('email'),
+            'name' => $this->request->getPost('name'),
+            'subject' => $this->request->getPost('subject'),
+            'message' => $this->request->getPost('message'),
+        ];
+        $users->save($data);
+
         // Redirect to prevent form resubmission
         return redirect()->to(base_url('/contacts'));
     }
