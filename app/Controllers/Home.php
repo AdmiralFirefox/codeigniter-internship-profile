@@ -44,16 +44,6 @@ class Home extends BaseController
         return view('projects', ['projects' => $projects]);
     }
 
-    public function interests() 
-    {
-        return view('interests');
-    }
-
-    public function questions() 
-    {
-        return view('questions');
-    }
-
     public function contacts()
     {
         return view('contacts');

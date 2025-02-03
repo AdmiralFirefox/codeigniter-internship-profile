@@ -15,8 +15,6 @@
             <a href="/about">About</a>
             <a href="/skills">Skills</a>
             <a href="/projects">Projects</a>
-            <a href="/interests">Interests</a>
-            <a href="/questions">FAQ</a>
             <a href="/contacts">Contact</a>
         </div>
     </nav>
@@ -26,8 +24,6 @@
         <a href="/about">About</a>
         <a href="/skills">Skills</a>
         <a href="/projects">Projects</a>
-        <a href="/interests">Interests</a>
-        <a href="/questions">FAQ</a>
         <a href="/contacts">Contact</a>
     </nav>
 
