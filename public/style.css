@@ -673,6 +673,8 @@
 }
 .contacts-section .contact-info h1 {
   font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  font-weight: 700;
   text-align: center;
   font-size: 2.2rem;
   line-height: 1.2em;
@@ -732,6 +734,7 @@
 }
 .contacts-section .contact-form label {
   font-family: "Poppins", sans-serif;
+  color: #ffffff;
   font-weight: 500;
   font-size: 1.1rem;
   margin-top: 1em;
@@ -772,6 +775,7 @@
   font-size: 0.9rem;
   font-weight: 600;
   background: #3945c6;
+  color: #ffffff;
   border: none;
   align-self: start;
   margin-top: 2em;
@@ -785,6 +789,7 @@
 }
 .contacts-section .contact-form button:disabled {
   background: hsl(0, 0%, 23%);
+  color: #090808;
   cursor: not-allowed;
 }
 .contacts-section .contact-links {
