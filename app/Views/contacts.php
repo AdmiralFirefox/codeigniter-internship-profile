@@ -60,6 +60,7 @@
                 <th>Name</th>
                 <th>Subject</th>
                 <th>Message</th>
+                <th>Created At</th>
             </tr>
         </thead>
         <tbody>
@@ -69,6 +70,7 @@
                 <td><?= $user['name'] ?></td>
                 <td><?= $user['subject'] ?></td>
                 <td><?= $user['message'] ?></td>
+                <td><?= $user['created_at'] ?></td>
             </tr>
             <?php endforeach;?>
         </tbody>

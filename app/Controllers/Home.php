@@ -70,21 +70,24 @@ class Home extends BaseController
 
         // Show validation errors
         if (!$validation->withRequest($this->request)->run()) {
-            return view('contacts', ['validation' => $validation]);
+            $usersModel = new Users();
+            $users = $usersModel->findAll();
+            
+            return view('contacts', ['users' => $users,'validation' => $validation]);
         }
         
         // Send Email
-        $emailService = service('email');
-        $emailService->setFrom($this->request->getPost('email'), $this->request->getPost('name'));
-        $emailService->setTo('jamesjoseph.cuadra@wvsu.edu.ph');
-        $emailService->setSubject($this->request->getPost('subject'));
-        $emailService->setMessage($this->request->getPost('message'));
+        // $emailService = service('email');
+        // $emailService->setFrom($this->request->getPost('email'), $this->request->getPost('name'));
+        // $emailService->setTo('jamesjoseph.cuadra@wvsu.edu.ph');
+        // $emailService->setSubject($this->request->getPost('subject'));
+        // $emailService->setMessage($this->request->getPost('message'));
 
-        if ($emailService->send()) {
-            session()->setFlashdata('success', 'Email sent successfully!');
-        } else {
-            session()->setFlashdata('error', 'Failed to send email.');
-        }
+        // if ($emailService->send()) {
+        //     session()->setFlashdata('success', 'Email sent successfully!');
+        // } else {
+        //     session()->setFlashdata('error', 'Failed to send email.');
+        // }
 
         // Send Data to database
         $users = new Users();
@@ -95,6 +98,12 @@ class Home extends BaseController
             'message' => $this->request->getPost('message'),
         ];
         $users->save($data);
+
+        try {
+            session()->setFlashdata('success', 'Contact successfully added!');
+        } catch (\Exception $e) {
+            session()->setFlashdata('error', 'Failed to add contact: '.$e->getMessage());
+        }
 
         // Redirect to prevent form resubmission
         return redirect()->to(base_url('/contacts'));
