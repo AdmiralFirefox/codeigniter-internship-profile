@@ -1,12 +1,5 @@
 <?= $this->extend('layout/root_layout') ?>
 
-<?= $this->section('scripts') ?>
-<script type="module" src="scripts/navbar.js" defer></script>
-<script type="module" src="scripts/titleslide.js" defer></script>
-<script type="module" src="scripts/fadeupanimate.js" defer></script>
-<script type="module" src="scripts/accordion.js" defer></script>
-<?= $this->endsection() ?>
-
 <?= $this->section('content') ?>
 <div class="about-section" id="about-section">
     <div class="profile-picture">
@@ -100,4 +93,11 @@
         </div>
     </div>
 </div>
+<?= $this->endsection() ?>
+
+<?= $this->section('scripts') ?>
+<script type="module" src="scripts/navbar.js"></script>
+<script type="module" src="scripts/titleslide.js"></script>
+<script type="module" src="scripts/fadeupanimate.js"></script>
+<script type="module" src="scripts/accordion.js"></script>
 <?= $this->endsection() ?>

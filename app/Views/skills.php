@@ -1,11 +1,5 @@
 <?= $this->extend('layout/root_layout') ?>
 
-<?= $this->section('scripts') ?>
-<script type="module" src="scripts/navbar.js" defer></script>
-<script type="module" src="scripts/titleslide.js" defer></script>
-<script type="module" src="scripts/fadeupanimate.js" defer></script>
-<?= $this->endsection() ?>
-
 <?= $this->section('content') ?>
 <div class="skills-section" id="skills-section">
     <h1 id="title-slide">Skills</h1>
@@ -45,4 +39,10 @@
         </div>
     </div>
 </div>
+<?= $this->endsection() ?>
+
+<?= $this->section('scripts') ?>
+<script type="module" src="scripts/navbar.js"></script>
+<script type="module" src="scripts/titleslide.js"></script>
+<script type="module" src="scripts/fadeupanimate.js"></script>
 <?= $this->endsection() ?>

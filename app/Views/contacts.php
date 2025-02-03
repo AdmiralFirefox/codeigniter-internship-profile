@@ -1,10 +1,5 @@
 <?= $this->extend('layout/root_layout') ?>
 
-<?= $this->section('scripts') ?>
-<script type="module" src="scripts/navbar.js" defer></script>
-<script type="module" src="scripts/contacts.js" defer></script>
-<?= $this->endsection() ?>
-
 <?= $this->section('content') ?>
 <div class="contacts-section" id="contacts-section">
     <div class="contact-info">
@@ -56,4 +51,36 @@
         </a>
     </div>
 </div>
+
+<div class="user-table-content">
+    <table id="example" class="table is-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach($users as $user):?>
+            <tr>
+                <td><?= $user['email'] ?></td>
+                <td><?= $user['name'] ?></td>
+                <td><?= $user['subject'] ?></td>
+                <td><?= $user['message'] ?></td>
+            </tr>
+            <?php endforeach;?>
+        </tbody>
+    </table>
+</div>
+<?= $this->endsection() ?>
+
+<?= $this->section('scripts') ?>
+<script type="module" src="scripts/navbar.js"></script>
+<script type="module" src="scripts/contacts.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://cdn.datatables.net/2.2.1/js/dataTables.js"></script>
+<script src="https://cdn.datatables.net/2.2.1/js/dataTables.bulma.js"></script>
 <?= $this->endsection() ?>

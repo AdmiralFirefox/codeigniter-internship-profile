@@ -3,8 +3,6 @@
 
 <head>
     <?= $this->setVar('site_title', 'James Joseph Cuadra | Portfolio')->include('components/head') ?>
-
-    <?= $this->renderSection('scripts') ?>
 </head>
 
 <body>
@@ -13,6 +11,8 @@
     <main>
         <?= $this->renderSection('content') ?>
     </main>
+
+    <?= $this->renderSection('scripts') ?>
 </body>
 
 </html>

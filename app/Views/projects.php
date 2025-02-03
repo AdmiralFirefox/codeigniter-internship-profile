@@ -1,11 +1,5 @@
 <?= $this->extend('layout/root_layout') ?>
 
-<?= $this->section('scripts') ?>
-<script type="module" src="scripts/navbar.js" defer></script>
-<script type="module" src="scripts/titleslide.js" defer></script>
-<script type="module" src="scripts/revealanimate.js" defer></script>
-<?= $this->endsection() ?>
-
 <?= $this->section('content') ?>
 <div class="projects-section" id="projects-section">
     <h1 id="title-slide">Projects</h1>
@@ -21,4 +15,10 @@
         <?php endforeach?>
     </ul>
 </div>
+<?= $this->endsection() ?>
+
+<?= $this->section('scripts') ?>
+<script type="module" src="scripts/navbar.js"></script>
+<script type="module" src="scripts/titleslide.js"></script>
+<script type="module" src="scripts/revealanimate.js"></script>
 <?= $this->endsection() ?>

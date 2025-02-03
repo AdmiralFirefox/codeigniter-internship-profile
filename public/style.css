@@ -807,6 +807,12 @@
   }
 }
 
+.user-table-content {
+  width: min(65em, 90%);
+  padding-bottom: 7em;
+  margin: 0 auto;
+}
+
 :root {
   color-scheme: dark;
 }

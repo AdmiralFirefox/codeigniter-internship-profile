@@ -1,11 +1,5 @@
 <?= $this->extend('layout/root_layout') ?>
 
-<?= $this->section('scripts') ?>
-<script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js" defer></script>
-<script type="module" src="scripts/navbar.js" defer></script>
-<script type="module" src="scripts/initialanimation.js" defer></script>
-<?= $this->endsection() ?>
-
 <?= $this->section('content') ?>
 <aside id="initialTextAnimation" class="initial-text-animation">
     <p>James Joseph Cuadra | Profile</p>
@@ -27,4 +21,10 @@
 
     <div class="gradient-shadow"></div>
 </div>
+<?= $this->endsection() ?>
+
+<?= $this->section('scripts') ?>
+<script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+<script type="module" src="scripts/navbar.js"></script>
+<script type="module" src="scripts/initialanimation.js"></script>
 <?= $this->endsection() ?>
