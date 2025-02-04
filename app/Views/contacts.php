@@ -71,13 +71,13 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach($users as $user):?>
+            <?php foreach($contacts as $contact):?>
             <tr>
-                <td><?= $user['email'] ?></td>
-                <td><?= $user['name'] ?></td>
-                <td><?= $user['subject'] ?></td>
-                <td><?= $user['message'] ?></td>
-                <td><?= $user['created_at'] ?></td>
+                <td><?= $contact['email'] ?></td>
+                <td><?= $contact['name'] ?></td>
+                <td><?= $contact['subject'] ?></td>
+                <td><?= $contact['message'] ?></td>
+                <td><?= $contact['created_at'] ?></td>
             </tr>
             <?php endforeach;?>
         </tbody>

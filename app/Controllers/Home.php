@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\Skills;
 use App\Models\Projects;
-use App\Models\Users;
+use App\Models\Contacts;
 
 class Home extends BaseController
 {
@@ -51,10 +51,10 @@ class Home extends BaseController
 
     public function contacts()
     {
-        $usersModel = new Users();
-        $users = $usersModel->findAll();
+        $contactsModel = new Contacts();
+        $contacts = $contactsModel->findAll();
            
-        return view('contacts', ['users' => $users]);
+        return view('contacts', ['contacts' => $contacts]);
     }
 
     public function sendEmail()
@@ -63,7 +63,7 @@ class Home extends BaseController
 
         $validation->setRules([
             'email' => [
-                'rules' => 'required|valid_email|is_unique[users.email]',
+                'rules' => 'required|valid_email|is_unique[contacts.email]',
                 'errors' => [
                     'is_unique' => 'This email is already registered. Please use another one.'
                 ]
@@ -75,10 +75,10 @@ class Home extends BaseController
 
         // Show validation errors
         if (!$validation->withRequest($this->request)->run()) {
-            $usersModel = new Users();
-            $users = $usersModel->findAll();
+            $contactsModel = new Contacts();
+            $contacts = $contactsModel->findAll();
             
-            return view('contacts', ['users' => $users,'validation' => $validation]);
+            return view('contacts', ['contacts' => $contacts,'validation' => $validation]);
         }
         
         // Send Email
@@ -95,14 +95,14 @@ class Home extends BaseController
         // }
 
         // Send Data to database
-        $users = new Users();
+        $contacts = new Contacts();
         $data = [
             'email' => $this->request->getPost('email'),
             'name' => $this->request->getPost('name'),
             'subject' => $this->request->getPost('subject'),
             'message' => $this->request->getPost('message'),
         ];
-        $users->save($data);
+        $contacts->save($data);
 
         try {
             session()->setFlashdata('success', 'Contact successfully added!');
