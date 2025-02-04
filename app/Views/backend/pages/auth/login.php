@@ -23,7 +23,7 @@
         <?php endif;?>
 
         <label for="login_id">Username or Email</label>
-        <input type="text" name="login_id" value="<?= set_value('login_id') ?>" required />
+        <input type="text" name="login_id" required />
 
         <?php if($validation->getError('login_id')): ?>
         <p class="login-error">
@@ -31,8 +31,8 @@
         </p>
         <?php endif; ?>
 
-        <label for="name">Password</label>
-        <input type="password" name="password" value="<? set_value('password') ?>" required />
+        <label for="password">Password</label>
+        <input type="password" name="password" required />
 
         <?php if($validation->getError('password')): ?>
         <p class="login-error">

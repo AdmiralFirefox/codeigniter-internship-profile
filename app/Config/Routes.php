@@ -16,7 +16,8 @@ $routes->get('/blog', 'Home::blog');
 $routes->group('blog', static function ($routes) {
     $routes->group('admin', static function ($routes) {
         $routes->group('', [], static function($routes) {
-            $routes->get('/', 'AdminController::index', ['as' => 'admin.home']);
+            $routes->get('home', 'AdminController::index', ['as' => 'admin.home']);
+            $routes->get('logout', 'AdminController::logoutHandler', ['as' => 'admin.logout']);
         });
     
         $routes->group('', [], static function($routes) {
