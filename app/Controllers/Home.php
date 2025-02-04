@@ -36,6 +36,11 @@ class Home extends BaseController
         return view('skills', $data);
     }
 
+    public function blog()
+    {
+        return view('blog');
+    }
+
     public function projects() 
     {
         $projectsModel = new Projects();
