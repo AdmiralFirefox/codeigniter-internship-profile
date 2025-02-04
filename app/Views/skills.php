@@ -42,7 +42,7 @@
 <?= $this->endsection() ?>
 
 <?= $this->section('scripts') ?>
-<script type="module" src="scripts/navbar.js"></script>
-<script type="module" src="scripts/titleslide.js"></script>
-<script type="module" src="scripts/fadeupanimate.js"></script>
+<script type="module" src="/scripts/navbar.js"></script>
+<script type="module" src="/scripts/titleslide.js"></script>
+<script type="module" src="/scripts/fadeupanimate.js"></script>
 <?= $this->endsection() ?>

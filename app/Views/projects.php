@@ -18,7 +18,7 @@
 <?= $this->endsection() ?>
 
 <?= $this->section('scripts') ?>
-<script type="module" src="scripts/navbar.js"></script>
-<script type="module" src="scripts/titleslide.js"></script>
-<script type="module" src="scripts/revealanimate.js"></script>
+<script type="module" src="/scripts/navbar.js"></script>
+<script type="module" src="/scripts/titleslide.js"></script>
+<script type="module" src="/scripts/revealanimate.js"></script>
 <?= $this->endsection() ?>

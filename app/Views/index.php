@@ -25,6 +25,6 @@
 
 <?= $this->section('scripts') ?>
 <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
-<script type="module" src="scripts/navbar.js"></script>
-<script type="module" src="scripts/initialanimation.js"></script>
+<script type="module" src="/scripts/navbar.js"></script>
+<script type="module" src="/scripts/initialanimation.js"></script>
 <?= $this->endsection() ?>

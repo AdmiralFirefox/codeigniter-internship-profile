@@ -86,8 +86,8 @@
 <?= $this->endsection() ?>
 
 <?= $this->section('scripts') ?>
-<script type="module" src="scripts/navbar.js"></script>
-<script type="module" src="scripts/contacts.js"></script>
+<script type="module" src="/scripts/navbar.js"></script>
+<script type="module" src="/scripts/contacts.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script src="https://cdn.datatables.net/2.2.1/js/dataTables.js"></script>
