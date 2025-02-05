@@ -32,12 +32,6 @@
         </tbody>
     </table>
 </div>
-
-<!-- <style>
-body {
-    background: red !important;
-}
-</style> -->
 <?= $this->endsection() ?>
 
 <?= $this->section('scripts') ?>

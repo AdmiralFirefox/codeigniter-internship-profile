@@ -15,6 +15,7 @@
             <div class="post-links">
                 <a href="">View Post</a>
                 <a href="">Edit Post</a>
+                <a href="">Delete Post</a>
             </div>
         </li>
         <?php endforeach;?>
