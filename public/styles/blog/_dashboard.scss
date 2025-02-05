@@ -1,7 +1,7 @@
 @use "../themeprovider/color" as color;
 
 .blog-dashboard {
-  padding-top: 7em;
+  padding-top: 1.1em;
   padding-bottom: 7em;
   display: flex;
   flex-direction: column;
@@ -61,6 +61,7 @@
 
       p {
         font-family: "Poppins", sans-serif;
+        color: color.$white-color;
 
         &:first-of-type {
           font-size: 1.5rem;

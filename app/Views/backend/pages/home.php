@@ -1,4 +1,4 @@
-<?= $this->extend('layout/root_layout') ?>
+<?= $this->extend('layout/auth_layout') ?>
 
 <?= $this->section('content') ?>
 <div class="blog-dashboard">

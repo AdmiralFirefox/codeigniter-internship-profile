@@ -1,0 +1,21 @@
+@use "../themeprovider/color" as color;
+
+.admin-header {
+  padding-top: 7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+
+  a {
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    color: color.$white-color;
+    font-size: 1.25rem;
+    font-weight: 600;
+
+    &:hover {
+        text-decoration: underline;
+    }
+  }
+}
