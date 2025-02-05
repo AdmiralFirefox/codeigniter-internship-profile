@@ -24,7 +24,7 @@ class CIAuth
         }
     }
 
-    public static function get() {
+    public static function check() {
         $session = session();
         return $session->has('logged_in');
     }
