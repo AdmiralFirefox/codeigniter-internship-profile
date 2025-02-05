@@ -4,8 +4,9 @@
 @use "hero";
 @use "about";
 @use "skills";
-@use "blog";
-@use "login";
+@use "blog/blog";
+@use "blog/login";
+@use "blog/dashboard";
 @use "projects";
 @use "interests";
 @use "questions";

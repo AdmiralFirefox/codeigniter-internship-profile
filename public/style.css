@@ -507,6 +507,92 @@
   cursor: not-allowed;
 }
 
+.blog-dashboard {
+  padding-top: 7em;
+  padding-bottom: 7em;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: min(50em, 85%);
+  margin: 0 auto;
+}
+.blog-dashboard .blog-actions {
+  display: flex;
+  justify-content: space-between;
+}
+.blog-dashboard .blog-actions a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  border: none;
+  padding: 0.7em 1em;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+.blog-dashboard .blog-actions a:first-of-type {
+  background-color: #3945c6;
+}
+.blog-dashboard .blog-actions a:first-of-type:hover {
+  background-color: hsl(235, 55%, 58%);
+}
+.blog-dashboard .blog-actions a:last-of-type {
+  background-color: #E50914;
+}
+.blog-dashboard .blog-actions a:last-of-type:hover {
+  background-color: hsl(357, 92%, 55%);
+}
+.blog-dashboard .blog-posts {
+  margin-top: 2.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2.5em;
+}
+.blog-dashboard .blog-posts li {
+  list-style: none;
+  background: hsl(0, 0%, 23%);
+  border-radius: 10px;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: background 0.2s ease-in-out;
+}
+.blog-dashboard .blog-posts li p {
+  font-family: "Poppins", sans-serif;
+}
+.blog-dashboard .blog-posts li p:first-of-type {
+  font-size: 1.5rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.blog-dashboard .blog-posts li p:nth-of-type(2) {
+  font-size: 1.2rem;
+  margin-top: 0.8em;
+  overflow-wrap: anywhere;
+}
+.blog-dashboard .blog-posts li p:nth-of-type(3) {
+  font-size: 1rem;
+  margin-top: 0.6em;
+  overflow-wrap: anywhere;
+}
+.blog-dashboard .blog-posts li .post-links {
+  display: flex;
+  gap: 1.5em;
+  margin-top: 1em;
+}
+.blog-dashboard .blog-posts li .post-links a {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  color: hsl(270, 77%, 70%);
+  font-size: 1rem;
+}
+.blog-dashboard .blog-posts li .post-links a:hover {
+  text-decoration: underline;
+}
+
 .projects-section {
   padding-top: 7em;
   padding-bottom: 8em;

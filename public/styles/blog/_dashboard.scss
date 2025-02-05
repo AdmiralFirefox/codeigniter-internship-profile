@@ -1,0 +1,102 @@
+@use "../themeprovider/color" as color;
+
+.blog-dashboard {
+  padding-top: 7em;
+  padding-bottom: 7em;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: min(50em, 85%);
+  margin: 0 auto;
+
+  .blog-actions {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      text-decoration: none;
+      color: color.$white-color;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      border: none;
+      padding: 0.7em 1em;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background 0.2s ease-in-out;
+
+      &:first-of-type {
+        background-color: color.$blue-color;
+
+        &:hover {
+          background-color: color.$blue-color-hover;
+        }
+      }
+
+      &:last-of-type {
+        background-color: color.$red-color;
+
+        &:hover {
+          background-color: color.$red-color-hover;
+        }
+      }
+    }
+  }
+
+  .blog-posts {
+    margin-top: 2.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2.5em;
+
+    li {
+      list-style: none;
+      background: color.$light-black-color;
+      border-radius: 10px;
+      padding: 1.5em;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: background 0.2s ease-in-out;
+
+      p {
+        font-family: "Poppins", sans-serif;
+
+        &:first-of-type {
+          font-size: 1.5rem;
+          font-weight: 600;
+          overflow-wrap: anywhere;
+        }
+
+        &:nth-of-type(2) {
+          font-size: 1.2rem;
+          margin-top: 0.8em;
+          overflow-wrap: anywhere;
+        }
+
+        &:nth-of-type(3) {
+          font-size: 1rem;
+          margin-top: 0.6em;
+          overflow-wrap: anywhere;
+        }
+      }
+
+      .post-links {
+        display: flex;
+        gap: 1.5em;
+        margin-top: 1em;
+
+        a {
+          font-family: "Poppins", sans-serif;
+          text-decoration: none;
+          color: color.$purple-color-hover;
+          font-size: 1rem;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
