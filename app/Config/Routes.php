@@ -24,6 +24,9 @@ $routes->group('blog', static function ($routes) {
             // Route for Creating Blog
             $routes->get('createBlog', 'AdminController::createBlog', ['as' => 'admin.create_blog']);
             $routes->post('createBlogHandler', 'AdminController::createBlogHandler', ['as' => 'admin.create_blog_handler']);
+
+            // Route for Deleting Blog
+            $routes->post('deleteBlogHandler/(:num)', 'AdminController::deleteBlogHandler/$1', ['as' => 'admin.delete_blog_handler']);
         });
     
         $routes->group('', ['filter' => 'cifilter:guest'], static function($routes) {

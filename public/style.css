@@ -687,6 +687,30 @@
 .blog-dashboard .blog-actions a:last-of-type:hover {
   background-color: hsl(357, 92%, 55%);
 }
+.blog-dashboard .delete-success {
+  width: min(27em, 100%);
+  margin: 1.3em auto 0em auto;
+  background: #E50914;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 0.6em 1em;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.blog-dashboard .delete-error {
+  width: min(27em, 100%);
+  margin: 1.3em auto 0em auto;
+  background: #E50914;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 0.6em 1em;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
 .blog-dashboard .blog-posts {
   margin-top: 2.5em;
   display: flex;
@@ -723,19 +747,32 @@
   margin-top: 0.6em;
   overflow-wrap: anywhere;
 }
-.blog-dashboard .blog-posts li .post-links {
+.blog-dashboard .blog-posts li .post-actions {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1.5em;
   margin-top: 1em;
 }
-.blog-dashboard .blog-posts li .post-links a {
+.blog-dashboard .blog-posts li .post-actions a {
   font-family: "Poppins", sans-serif;
   text-decoration: none;
   color: hsl(270, 77%, 70%);
   font-size: 1rem;
 }
-.blog-dashboard .blog-posts li .post-links a:hover {
+.blog-dashboard .blog-posts li .post-actions a:hover {
+  text-decoration: underline;
+}
+.blog-dashboard .blog-posts li .post-actions form button {
+  border: none;
+  background: none;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  color: hsl(270, 77%, 70%);
+  font-size: 1rem;
+  cursor: pointer;
+}
+.blog-dashboard .blog-posts li .post-actions form button:hover {
   text-decoration: underline;
 }
 

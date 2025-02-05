@@ -42,6 +42,32 @@
     }
   }
 
+  .delete-success {
+    width: min(27em, 100%);
+    margin: 1.3em auto 0em auto;
+    background: color.$red-color;
+    color: color.$white-color;
+    border-radius: 10px;
+    padding: 0.6em 1em;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .delete-error {
+    width: min(27em, 100%);
+    margin: 1.3em auto 0em auto;
+    background: color.$red-color;
+    color: color.$white-color;
+    border-radius: 10px;
+    padding: 0.6em 1em;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
   .blog-posts {
     margin-top: 2.5em;
     display: flex;
@@ -82,9 +108,10 @@
         }
       }
 
-      .post-links {
+      .post-actions {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         gap: 1.5em;
         margin-top: 1em;
 
@@ -96,6 +123,22 @@
 
           &:hover {
             text-decoration: underline;
+          }
+        }
+
+        form {
+          button {
+            border: none;
+            background: none;
+            font-family: "Poppins", sans-serif;
+            text-decoration: none;
+            color: color.$purple-color-hover;
+            font-size: 1rem;
+            cursor: pointer;
+
+            &:hover {
+              text-decoration: underline;
+            }
           }
         }
       }
