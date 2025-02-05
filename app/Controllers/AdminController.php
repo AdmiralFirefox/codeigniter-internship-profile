@@ -44,7 +44,7 @@ class AdminController extends BaseController
         $validation = service('validation');
 
         $validation->setRules([
-            'banner_url' => [
+            'post_banner_url' => [
                 'rules' => 'required|valid_url_strict',
                 'errors' => [
                     'required' => 'Banner url field is required',
@@ -80,7 +80,7 @@ class AdminController extends BaseController
         // Create New Post to the Database
         $posts = new Posts();
         $data = [
-            'banner_url' => $this->request->getPost('banner_url'),
+            'post_banner_url' => $this->request->getPost('post_banner_url'),
             'post_title' => $this->request->getPost('post_title'),
             'post_author' => $this->request->getPost('post_author'),
             'post_content' => $this->request->getPost('post_content'),

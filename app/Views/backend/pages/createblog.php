@@ -22,8 +22,8 @@
 
     <form class="create-blog-form" id="createBlogForm" action="<?= route_to('admin.create_blog_handler') ?>"
         method="POST">
-        <label for="banner_url">Banner URL</label>
-        <input type="text" name="banner_url" id="banner_url" required />
+        <label for="post_banner_url">Banner URL</label>
+        <input type="text" name="post_banner_url" id="post_banner_url" required />
 
         <label for="post_title">Post Title</label>
         <input type="text" name="post_title" id="post_title" required />
