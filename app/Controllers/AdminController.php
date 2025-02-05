@@ -98,9 +98,13 @@ class AdminController extends BaseController
 
     public function deleteBlogHandler($id) {
         $posts = new Posts();
+        $post = $posts->find($id);
 
-        if ($posts->delete($id)) {
-            return redirect()->route('admin.home')->with('success', 'Post deleted successfully.');
+        if ($post) {
+            $postTitle = $post['post_title']; 
+            $posts->delete($id); 
+            
+            return redirect()->route('admin.home')->with('success', "Deleted post '$postTitle' successfully.");
         } else {
             return redirect()->route('admin.home')->with('error', 'Failed to delete post.');
         }
