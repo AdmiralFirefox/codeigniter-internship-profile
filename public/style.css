@@ -418,6 +418,126 @@
   transform: translateY(0em);
 }
 
+.create-blog {
+  padding-top: 1.1em;
+  padding-bottom: 7em;
+  width: min(50em, 85%);
+  margin: 0 auto;
+}
+.create-blog .blog-error-list {
+  margin-top: 1.3em;
+  width: 100%;
+}
+.create-blog .blog-error-list .errors {
+  width: min(27em, 100%);
+  margin: 0 auto;
+}
+.create-blog .blog-error-list .errors ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.create-blog .blog-error-list .errors ul li {
+  background: #E50914;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 0.6em 1em;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.create-blog .create-blog-success {
+  width: min(27em, 100%);
+  margin: 1.3em auto 0em auto;
+  background: #00B14F;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 0.6em 1em;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.create-blog .create-blog-error {
+  width: min(27em, 100%);
+  margin: 1.3em auto 0em auto;
+  background: #E50914;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 0.6em 1em;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.create-blog .create-blog-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.create-blog .create-blog-form label {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-top: 1em;
+}
+.create-blog .create-blog-form label:first-of-type {
+  margin-top: 1.5em;
+}
+.create-blog .create-blog-form input {
+  font-family: "Poppins", sans-serif;
+  background: hsl(0, 0%, 23%);
+  border: none;
+  padding: 0.8em 1em;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 10px;
+  margin-top: 0.5em;
+}
+.create-blog .create-blog-form input:focus {
+  outline: none;
+}
+.create-blog .create-blog-form textarea {
+  font-family: "Poppins", sans-serif;
+  background: hsl(0, 0%, 23%);
+  border: none;
+  resize: none;
+  min-height: 15em;
+  padding: 0.8em 1em;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 10px;
+  margin-top: 0.5em;
+}
+.create-blog .create-blog-form textarea:focus {
+  outline: none;
+}
+.create-blog .create-blog-form button {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: #3945c6;
+  color: #ffffff;
+  border: none;
+  align-self: start;
+  margin-top: 2em;
+  border-radius: 10px;
+  padding: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+.create-blog .create-blog-form button:hover {
+  background: hsl(235, 55%, 58%);
+}
+.create-blog .create-blog-form button:disabled {
+  background: hsl(0, 0%, 23%);
+  color: #090808;
+  cursor: not-allowed;
+}
+
 .admin-header {
   padding-top: 7em;
   display: flex;

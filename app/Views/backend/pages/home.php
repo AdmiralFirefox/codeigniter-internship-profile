@@ -3,7 +3,7 @@
 <?= $this->section('content') ?>
 <div class="blog-dashboard">
     <div class="blog-actions">
-        <a href="">Create Blog</a>
+        <a href="<?= route_to('admin.create_blog') ?>">Create Blog</a>
         <a href="<?= route_to('admin.logout')?>">Log Out</a>
     </div>
     <ul class="blog-posts">

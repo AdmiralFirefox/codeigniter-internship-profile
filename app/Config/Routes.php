@@ -16,9 +16,14 @@ $routes->get('/blog', 'Home::blog');
 $routes->group('blog', static function ($routes) {
     $routes->group('admin', static function ($routes) {
         $routes->group('', ['filter' => 'cifilter:auth'], static function($routes) {
+            // Main Admin Pages
             $routes->get('dashboard', 'AdminController::index', ['as' => 'admin.home']);
             $routes->get('logout', 'AdminController::logoutHandler', ['as' => 'admin.logout']);
             $routes->get('contacts', 'AdminController::adminContacts', ['as' => 'admin.contacts']);
+            
+            // Route for Creating Blog
+            $routes->get('createBlog', 'AdminController::createBlog', ['as' => 'admin.create_blog']);
+            $routes->post('createBlogHandler', 'AdminController::createBlogHandler', ['as' => 'admin.create_blog_handler']);
         });
     
         $routes->group('', ['filter' => 'cifilter:guest'], static function($routes) {
