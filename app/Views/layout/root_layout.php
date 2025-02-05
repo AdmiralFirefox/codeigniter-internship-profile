@@ -3,8 +3,6 @@
 
 <head>
     <?= $this->setVar('site_title', 'James Joseph Cuadra | Portfolio')->include('components/head') ?>
-
-    <?= $this->renderSection('datatables')?>
 </head>
 
 <body>

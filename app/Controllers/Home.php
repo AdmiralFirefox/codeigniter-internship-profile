@@ -51,10 +51,7 @@ class Home extends BaseController
 
     public function contacts()
     {
-        $contactsModel = new Contacts();
-        $contacts = $contactsModel->findAll();
-           
-        return view('contacts', ['contacts' => $contacts]);
+        return view('contacts');
     }
 
     public function sendEmail()

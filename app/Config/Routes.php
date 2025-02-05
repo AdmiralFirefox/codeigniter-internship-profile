@@ -18,6 +18,7 @@ $routes->group('blog', static function ($routes) {
         $routes->group('', ['filter' => 'cifilter:auth'], static function($routes) {
             $routes->get('dashboard', 'AdminController::index', ['as' => 'admin.home']);
             $routes->get('logout', 'AdminController::logoutHandler', ['as' => 'admin.logout']);
+            $routes->get('contacts', 'AdminController::adminContacts', ['as' => 'admin.contacts']);
         });
     
         $routes->group('', ['filter' => 'cifilter:guest'], static function($routes) {

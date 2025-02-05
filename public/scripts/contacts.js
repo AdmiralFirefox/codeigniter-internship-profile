@@ -5,6 +5,3 @@ contactForm.addEventListener("submit", () => {
   submitButton.textContent = "Submitting...";
   submitButton.disabled = true;
 });
-
-// DataTables
-new DataTable("#example");

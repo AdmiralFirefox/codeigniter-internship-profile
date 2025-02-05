@@ -6,6 +6,7 @@ use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 use App\Libraries\CIAuth;
 use App\Models\Posts;
+use App\Models\Contacts;
 
 class AdminController extends BaseController
 {
@@ -26,5 +27,12 @@ class AdminController extends BaseController
     {
         CIAuth::forget();
         return redirect()->route('admin.login.form')->with('error', 'You are logged out!');
+    }
+
+    public function adminContacts() {
+        $contactsModel = new Contacts();
+        $contacts = $contactsModel->findAll();
+        
+        return view('backend/pages/admincontacts', ['contacts' => $contacts]);
     }
 }

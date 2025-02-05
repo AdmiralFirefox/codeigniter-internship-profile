@@ -436,6 +436,12 @@
   text-decoration: underline;
 }
 
+.user-table-content {
+  width: min(65em, 90%);
+  padding: 3em 0em 7em 0em;
+  margin: 0 auto;
+}
+
 .login-content {
   padding: 7.5em 1.3em;
   display: flex;
@@ -1004,12 +1010,6 @@
   .contacts-section {
     padding: 8.5em 2em;
   }
-}
-
-.user-table-content {
-  width: min(65em, 90%);
-  padding-bottom: 7em;
-  margin: 0 auto;
 }
 
 :root {

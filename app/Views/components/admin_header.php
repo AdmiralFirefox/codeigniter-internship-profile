@@ -1,6 +1,6 @@
 <header>
     <nav class="admin-header">
-        <a href="/blog/admin/dashboard">Dashboard</a>
-        <a href="">Contacts</a>
+        <a href="<?= route_to('admin.home') ?>">Dashboard</a>
+        <a href="<?= route_to('admin.contacts') ?>">Contacts</a>
     </nav>
 </header>
