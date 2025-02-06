@@ -21,7 +21,7 @@
         <?php foreach($posts as $post): ?>
         <li>
             <p><?= $post['post_title']?></p>
-            <p><?= $post['post_author']?></p>
+            <p>by: <?= $post['post_author']?></p>
             <p id="postContent"><?= $post['post_content']?></p>
             <div class="post-actions">
                 <a href="<?= route_to('post.view', $post['post_slug']) ?>">View Post</a>

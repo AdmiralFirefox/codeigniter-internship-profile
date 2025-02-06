@@ -1,0 +1,41 @@
+@use "../themeprovider/color" as color;
+
+.blog-page-content {
+  padding-top: 1.1em;
+  padding-bottom: 7em;
+  width: min(50em, 85%);
+  margin: 0 auto;
+
+  .image-wrapper {
+    width: 100%;
+    height: 15em;
+    margin-top: 1em;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  h1 {
+    font-family: "Poppins", sans-serif;
+
+    &:first-of-type {
+      font-weight: 700;
+      margin-top: 0.8em;
+      font-size: 2.2rem;
+    }
+
+    &:last-of-type {
+      font-weight: 500;
+      font-size: 1.3rem;
+      margin-top: 0.3em;
+    }
+  }
+
+  p {
+    font-family: "Poppins", sans-serif;
+    margin-top: 2.3em;
+  }
+}
