@@ -81,7 +81,6 @@ class AdminController extends BaseController
         $posts = new Posts();
         $data = [
             'post_banner_url' => $this->request->getPost('post_banner_url'),
-            'post_slug' => $posts->generateSlug($this->request->getPost('post_title')),
             'post_title' => $this->request->getPost('post_title'),
             'post_author' => $this->request->getPost('post_author'),
             'post_content' => $this->request->getPost('post_content'),
