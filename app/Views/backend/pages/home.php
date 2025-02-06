@@ -25,7 +25,7 @@
             <p id="postContent"><?= $post['post_content']?></p>
             <div class="post-actions">
                 <a href="<?= route_to('post.view', $post['post_slug']) ?>">View Post</a>
-                <a href="">Edit Post</a>
+                <a href="<?= route_to('admin.update_blog', $post['post_slug']) ?>">Edit Post</a>
                 <form action="<?= route_to('admin.delete_blog_handler', $post['id']) ?>" method="POST"
                     onsubmit="return confirm('Are you sure you want to delete this post?');">
                     <button type="submit">Delete Post</button>

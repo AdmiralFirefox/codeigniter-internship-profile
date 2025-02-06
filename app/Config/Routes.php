@@ -30,6 +30,10 @@ $routes->group('blog', static function ($routes) {
 
             // Route for Viewing Blog
             $routes->get('post/(:segment)', 'AdminController::view/$1', ['as' => 'post.view']);
+
+            // Route for Editing Blog
+            $routes->get('updateBlog/(:segment)', 'AdminController::updateBlog/$1', ['as' => 'admin.update_blog']);
+            $routes->post('updateBlogHandler/(:segment)', 'AdminController::updateBlogHandler/$1', ['as' => 'admin.update_blog_handler']);
         });
     
         $routes->group('', ['filter' => 'cifilter:guest'], static function($routes) {

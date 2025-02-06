@@ -121,4 +121,75 @@ class AdminController extends BaseController
 
         return view('backend/pages/blog', ['post' => $post]);
     }
+
+    public function updateBlog($slug) {
+        $postsModel = new Posts();
+        $post = $postsModel->where('post_slug', $slug)->first();
+
+        if (!$post) {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+        }
+        
+        return view('backend/pages/editblog', ['post' => $post]);
+    }
+
+    public function updateBlogHandler($id) {
+        $validation = service('validation');
+
+        $validation->setRules([
+            'post_banner_url' => [
+                'rules' => 'required|valid_url_strict',
+                'errors' => [
+                    'required' => 'Banner url field is required',
+                    'valid_url_strict' => 'URL entered is not valid',
+                ],
+            ],
+            'post_title' => [
+                'rules' => 'required|max_length[30]',
+                'errors' => [
+                    'required' => 'Title field is required',
+                    'max_length' => 'Post title should not exceed 30 characters',
+                ],
+            ],
+            'post_author' => [
+                'rules' => 'required|max_length[50]',
+                'errors' => [
+                    'required' => 'Author field is required',
+                ]
+            ],
+            'post_content' => [
+                'rules'=> 'required',
+                'errors' => [
+                    'required' => 'Content field is required',
+                ] 
+            ],
+        ]);
+
+        // Show validation errors
+        if (!$validation->withRequest($this->request)->run()) {            
+            return view('backend/pages/editblog', ['validation' => $validation]);
+        }
+
+        // Edit Post in the Database
+        $posts = new Posts();
+        $data = [
+            'post_banner_url' => $this->request->getPost('post_banner_url'),
+            'post_title' => $this->request->getPost('post_title'),
+            'post_author' => $this->request->getPost('post_author'),
+            'post_content' => $this->request->getPost('post_content'),
+        ];
+        $posts->update($id, $data);
+
+        try {
+            session()->setFlashdata('success', 'Blog updated successfully!');
+        } catch (\Exception $e) {
+            session()->setFlashdata('error', 'Failed to update blog: '.$e->getMessage());
+        }
+
+        // Post slug
+        $post = $posts->find($id);
+        $postSlug = $post['post_slug'];
+        
+        return redirect()->to(base_url("/blog/admin/updateBlog/$postSlug"));
+    }
 }
