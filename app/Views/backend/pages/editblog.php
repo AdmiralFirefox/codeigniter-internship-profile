@@ -20,7 +20,8 @@
     </div>
     <?php endif; ?>
 
-    <form class="edit-blog-form" action="<?= route_to('admin.update_blog_handler', $post['id']) ?>" method="POST">
+    <form class="edit-blog-form" id="editBlogForm" action="<?= route_to('admin.update_blog_handler', $post['id']) ?>"
+        method="POST">
         <label for="post_banner_url">Banner URL</label>
         <input type="text" name="post_banner_url" id="post_banner_url" value="<?= $post['post_banner_url'] ?>"
             required />
@@ -35,11 +36,12 @@
         <textarea name="post_content" id="post_content" value="<?= $post['post_content'] ?>"
             required><?= $post['post_content'] ?></textarea>
 
-        <button type="submit">Update Blog</button>
+        <button type="submit" id="editBlogButton">Update Blog</button>
     </form>
 </div>
 <?= $this->endsection() ?>
 
 <?= $this->section('scripts') ?>
 <script type="module" src="/scripts/navbar.js"></script>
+<script type="module" src="/scripts/updateblog.js"></script>
 <?= $this->endsection() ?>
