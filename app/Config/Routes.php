@@ -27,6 +27,9 @@ $routes->group('blog', static function ($routes) {
 
             // Route for Deleting Blog
             $routes->post('deleteBlogHandler/(:num)', 'AdminController::deleteBlogHandler/$1', ['as' => 'admin.delete_blog_handler']);
+
+            // Route for Viewing Blog
+            $routes->get('post/(:segment)', 'AdminController::view/$1', ['as' => 'post.view']);
         });
     
         $routes->group('', ['filter' => 'cifilter:guest'], static function($routes) {

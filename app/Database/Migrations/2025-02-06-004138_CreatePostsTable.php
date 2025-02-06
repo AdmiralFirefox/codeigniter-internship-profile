@@ -18,6 +18,10 @@ class CreatePostsTable extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => '255',
             ],
+            'post_slug' => [
+                'type' => 'VARCHAR',
+                'constraint' => '255',
+            ],
             'post_title' => [
                 'type' => 'VARCHAR',
                 'constraint' => '255',
